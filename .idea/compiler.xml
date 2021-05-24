@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="seleniumprojectb22" />
-        <module name="Day3GitPractice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Day3GitPractice" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
