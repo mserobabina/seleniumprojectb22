@@ -17,8 +17,7 @@ public class P4_ETSY_Verify {
         //3 get the page
         driver.get("https://www.etsy.com");
         //4. search for ws
-        driver.findElement(By.id("global-enhancements-search-query"))
-                .sendKeys("wooden spoon" + Keys.ENTER);
+        driver.findElement(By.id("global-enhancements-search-query")).sendKeys("wooden spoon" + Keys.ENTER);
 
         //5. verify titles
         //expected ws

@@ -5,21 +5,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class CybertekTitleVerification {
+public class Practice {
     public static void main(String[] args) throws InterruptedException {
-        //1 set browser driver
+
+
         WebDriverManager.chromedriver().setup();
-        //2 create the instance of selenium web driver
         WebDriver driver = new ChromeDriver();
-        //maximize
         driver.manage().window().maximize();
-        //3 get the page
-        driver.get("http://practice.cybertekschool.com/");
+        driver.get("https://www.victoriassecret.com/us/");
+        driver.findElement(By.className("fabric-masthead-pushdown-component")).click();
 
-        driver.findElement(By.className("nav-link")).click();
-
-        String expectedInTitle = "Practice";
+        String expectedInTitle = "VICTORIA'S SECRET";
         String actualTitle = driver.getTitle();
+        System.out.println("actualTitle = " + actualTitle);
 
         if (actualTitle.equals(expectedInTitle)) {
             System.out.println("Title Verification PASSED");
@@ -28,6 +26,8 @@ public class CybertekTitleVerification {
             Thread.sleep(3000);
         }
         Thread.sleep(3000);
-      //  driver.quit();
+
+        //"fabric-icon-element fabric-vs-logo-2020-icon-element base"
+
     }
 }
